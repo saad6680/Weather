@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    
+</head>
+<body>
+    <div id="weather-container" class="app-container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon"><img src="../assets/images/Group 52.svg" alt="logo"></div>
+                Weather App
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for cities">
+                
+            </div>
+            <div class="unit-toggle">
+                <button id="fahrenheit" class="active">°F</button>
+                <button id="celsius">°C</button>
+            </div>
+        </div>
+        <div id="recent-container" class="recent-searches"></div>
+        
+        <div class="main-info">
+            <div class="left">
+                <div class="location-info">
+                    <div class="info-text">
+                        <div id="current-date" class="date">2nd Feb, Friday</div>
+                        <div id="location" class="city">Madrid</div>
+                        <div id="current-temp" class="temp">16°/-1°</div>
+                    </div>
+                    <div class="current-weather-icon">
+                        <div class="sun-icon"><img id="weather-icon" src="../assets/images/partly-cloudy.svg" alt=""></div>
+                    </div>
+                </div>
+        
+                <div class="con">
+                    <div class="forecast-box">
+                        <div class="section-title">TODAY'S FORECAST</div>
+                        <div id="hourly-container" class="hourly-forecast">
+                            <div class="forecast-item">
+                                <div class="forecast-time">1:00 PM</div>
+                                <div class="forecast-icon"><img src="../assets/images/snowy.svg" alt=""></div>
+                                <div class="forecast-temp">16°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">2:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/stromy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">13°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">3:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/stromy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">13°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">4:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/stromy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">12°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">5:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/stromy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">11°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">6:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/stromy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">10°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">7:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/stromy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">10°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">8:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/Night-snowy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">9°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">9:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/Night-snowy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">9°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">10:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/Night-snowy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">9°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">11:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/Night-snowy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">9°</div>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="forecast-time">12:00 PM</div>
+                                <div class="forecast-icon">
+                                    <div class="cloud-rain"><img src="../assets/images/Night-snowy.svg" alt=""></div>
+                                </div>
+                                <div class="forecast-temp">9°</div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="weather-details-box">
+                        <div class="section-title">WEATHER DETAILS</div>
+                        <div class="weather-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Sunrise</div>
+                                <div class="detail-value">
+                                    <span id="sunrise">8:18 am</span>
+                                    <div class="detail-icon"><img src="../assets/images/mingcute_sunrise-line.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Sunset</div>
+                                <div class="detail-value">
+                                    <span id="sunset">06:40 pm</span>
+                                    <div class="detail-icon"><img src="../assets/images/mingcute_sunrise-line.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Chance of rain</div>
+                                <div class="detail-value">
+                                    <span id="rain-chance">72%</span>
+                                    <div class="detail-icon"><img src="../assets/images/material-symbols_water-drop.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Wind</div>
+                                <div class="detail-value">
+                                    <span id="wind">8 km/h</span>
+                                    <div class="detail-icon">💨</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">UV index</div>
+                                <div class="detail-value">
+                                    <span id="uv-index">2 of 10</span>
+                                    <div class="detail-icon">☀️</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Feels like</div>
+                                <div class="detail-value">
+                                    <span id="feels-like">12°</span>
+                                    <div class="detail-icon">🌡️</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="weekly-container" class="seven-day-forecast">
+                <div class="section-title">7 DAYS FORECAST</div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">3rd February</div>
+                        <div class="day-name">Saturday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Partly Cloudy</div>
+                    </div>
+                    <div class="day-temp">10°/1°</div>
+                </div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">4th February</div>
+                        <div class="day-name">Sunday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Rainy</div>
+                    </div>
+                    <div class="day-temp">11°/2°</div>
+                </div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">5th February</div>
+                        <div class="day-name">Monday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Mostly Sunny</div>
+                    </div>
+                    <div class="day-temp">11°/-2°</div>
+                </div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">6th February</div>
+                        <div class="day-name">Tuesday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Partly Cloudy</div>
+                    </div>
+                    <div class="day-temp">12°/0°</div>
+                </div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">7th February</div>
+                        <div class="day-name">Wednesday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Partly Cloudy</div>
+                    </div>
+                    <div class="day-temp">12°/-1°</div>
+                </div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">8th February</div>
+                        <div class="day-name">Thursday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Mostly Sunny</div>
+                    </div>
+                    <div class="day-temp">15°/0°</div>
+                </div>
+                
+                <div class="day-forecast">
+                    <div class="day-info">
+                        <div class="day-date">9th February</div>
+                        <div class="day-name">Friday</div>
+                    </div>
+                    <div class="day-weather">
+                        <div class="day-icon"><img src="../assets/images/material-symbols_delete-outline.svg" alt=""></div>
+                        <div>Partly Cloudy</div>
+                    </div>
+                    <div class="day-temp">15°/1°</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="error-container" class="error-container hidden">
+        <p id="error-message">City not found. Please try again.</p>
+    </div>
+    
+    <div id="recent-container" class="recent-searches"></div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
